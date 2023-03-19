@@ -1,9 +1,12 @@
 :root{
+  --header-and-hero-banner-text-color: #fff;
   --header-text-glow-color-1: #fff;
-  --header-text-glow-color-2: rgb(255, 0, 119);
+  --header-text-glow-color-2: rgb(255, 0, 0);
   --hero-banner-text-glow-color-1: #fff;
-  --hero-banner-text-glow-color-2:  rgb(255, 0, 119);
-  --hero-banner-box-glow-color:  rgb(255, 0, 119);
+  --hero-banner-text-glow-color-2:  rgb(255, 0, 0);
+  --hero-banner-box-glow-color:  rgb(255, 0, 0);
+  --left-main-text-and-border-color: aliceblue;
+  --right-main-text-color: antiquewhite;
 
 }
 
@@ -11,10 +14,13 @@
   margin: 0px;
   padding: 0px;
 }
-
+.links{
+  text-decoration: none;
+}
+/* Here starts the Header styling */
 header h1, .menu li a p {
   text-align: center;
-  color: #fff;
+  color: var(--header-and-hero-banner-text-color);
   text-shadow: 0 0 5px var(--header-text-glow-color-1), 0 0 10px var(--header-text-glow-color-1), 0 0 15px var(--header-text-glow-color-1), 0 0 20px var(--header-text-glow-color-2), 0 0 35px var(--header-text-glow-color-2), 0 0 40px var(--header-text-glow-color-2), 0 0 50px var(--header-text-glow-color-2), 0 0 75px var(--header-text-glow-color-2);
 }
 
@@ -22,7 +28,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 20px 60px;
   background-color: rgb(27, 40, 44);
 }
 
@@ -38,13 +44,11 @@ h1 {
   padding-right: 18px;
 }
 
- .menu li {
+.menu li {
   margin: 5px;
 }
 
 .menu li a{
-  
-  text-decoration: none;
   font-size: 20px;
 }
 
@@ -52,9 +56,8 @@ h1 {
 .hero-banner{
   display: flex;
   justify-content: center;
-  align-content: center;
   padding: 40px;
-  background-image: url(/images/img2/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration\ \(2\).jpg);
+  background-image: url(/images/img2/modern-futuristic-sci-fi-background-3d-illustration.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -62,16 +65,23 @@ h1 {
 
 .hero-banner h2{
   background-color: rgb(27, 40, 44);
-  color:#ddac90;
   text-align: center;
   padding: 10px;
   border-radius: 20px;
-  color: #fff; /* set the text color */
+  color: var(--header-and-hero-banner-text-color);
   text-shadow: 0 0 5px var(--hero-banner-text-glow-color-1), 0 0 10px var(--hero-banner-text-glow-color-1), 0 0 15px var(--hero-banner-text-glow-color-1), 0 0 20px var(--hero-banner-text-glow-color-2), 0 0 35px var(--hero-banner-text-glow-color-2), 0 0 40px var(--hero-banner-text-glow-color-2), 0 0 50px var(--hero-banner-text-glow-color-2), 0 0 75px var(--hero-banner-text-glow-color-2);
   box-shadow: 0 0 10px var(--hero-banner-box-glow-color), 0 0 20px var(--hero-banner-box-glow-color), 0 0 30px var(--hero-banner-box-glow-color), 0 0 40px var(--hero-banner-box-glow-color);
 }
 
 /* Here starts the main styling */
+main{
+  background-image: url(/images/img1/stunning-view-colorful-patterned-neon-lights-darkness.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  border: 5px black solid;
+}
+
 .page-wrapper {
   padding: 40px;
   display: grid;
@@ -86,17 +96,25 @@ h1 {
 }
 
 .about h2, .work h2, .contact h2 {
+  color: var(--left-main-text-and-border-color);
   padding-right: 10px;
-  border-right: 2px black solid;
+  border-right: 2px var(--left-main-text-and-border-color) solid;
   text-align: right;
 }
 
-.contact div {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 30px;
+main section h2, main section p, .card-h3, .card p, .contact div p a{
+  color: var(--right-main-text-color);
 }
 
-.about p, .work div, .contact div {
-  padding-left: 30px;
+.contact div, .contact div p a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about p, .work div, .contact div{
+  margin-left: 18px;
+  padding: 12px;
+  border-radius: 20px;
+  background-color: rgba(80, 80, 80, 0.699);
 }
