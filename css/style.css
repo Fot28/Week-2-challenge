@@ -5,15 +5,17 @@
   --header-text-glow-color-1: #fff;
   --header-text-glow-color-2: rgb(255, 0, 0);
   /* Here starts the Hero banner styling */
-  --hero-banner-h2-background-color: rgba(27, 40, 44, 0.651);
+  --hero-banner-h2-background-color: rgb(0, 0, 0);
   --hero-banner-text-glow-color-1: #fff;
   --hero-banner-text-glow-color-2:  rgb(255, 0, 0);
   --hero-banner-box-glow-color:  rgb(255, 0, 0);
   /* Here starts the Main styling */
   --left-main-text-and-border-color: aliceblue;
-  --right-main-background-color: rgba(59, 59, 59, 0.815);
+  --right-main-background-color: rgba(90, 90, 90, 0.815);
   --right-main-text-color: rgb(255, 223, 181);
   --main-background-color: black;
+  --work-card-border-and-background-color:rgb(0, 140, 255);
+  --card-hover-color: rgb(241, 93, 93);
 }
 /* Here starts the Body styling */
 *{
@@ -54,23 +56,30 @@ h1 {
 
 .menu li a{
   font-size: 20px;
+  text-decoration: none;
 }
 
 /* Here starts the Hero banner styling */
 .hero-banner{
   display: flex;
-  justify-content: center;
-  padding: 40px;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  padding: 10px;
   background-image: url(/images/Hero-banner/modern-futuristic-sci-fi-background-3d-illustration.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
+.hero-banner img{
+  width: 150px;
+}
+
 .hero-banner h2{
-  background-color: var(--hero-banner-h2-background-color);
   text-align: center;
-  padding: 10px;
+  background-color: var(--hero-banner-h2-background-color);
+  padding: 15px;
   border-radius: 20px;
   color: var(--header-and-hero-banner-text-color);
   text-shadow: 0 0 5px var(--hero-banner-text-glow-color-1), 0 0 10px var(--hero-banner-text-glow-color-1), 0 0 15px var(--hero-banner-text-glow-color-1), 0 0 20px var(--hero-banner-text-glow-color-2), 0 0 35px var(--hero-banner-text-glow-color-2), 0 0 40px var(--hero-banner-text-glow-color-2), 0 0 50px var(--hero-banner-text-glow-color-2), 0 0 75px var(--hero-banner-text-glow-color-2);
@@ -117,6 +126,10 @@ main section h2, main section p, .card-h3, .card p, .contact div p a{
   color: var(--right-main-text-color);
 }
 
+.about p{
+  font-size: 18px;
+}
+
 .about p, .contact div, .work div{
 margin-right: 35px;
 }
@@ -131,72 +144,92 @@ margin-right: 35px;
 .work div {
   margin-left: 18px;
   padding: 12px;
-}
+}  
 
 /* Here starts the work section grid styling */
 
 #work-grid a{
-  border: 2px black solid;
+  
   margin: 5px;
   padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
+}  
 
 #work-grid{
   display: grid;
-  grid-template-rows: 150px 150px 150px 150px;
+  grid-template-rows:150px 150px 150px 150px 150px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
+  "card1 card1"
   "card1 card1"
   "card1 card1"
   "card2 card3"
   "card4 card5" 
   ;
-}
+}  
 
-.card h3{
-  font-size: 20px;
-  
-}
-
-.card p{
-  font-size: 12px;
-}
+#card1{
+  grid-area: card1;
+  background-image: url(/images/work/study.jpg);
+}  
+#card2{
+grid-area: card2;
+background-image: url(/images/work/marketing.jpg);
+}  
+#card3{
+  grid-area: card3;
+  background-image: url(/images/work/calculator.jpg);
+}  
+#card4{
+  grid-area: card4;
+  background-image: url(/images/work/e-comerce.jpg);
+}  
+#card5{
+  grid-area: card5;
+  background-image: url(/images/work/login.jpg);
+}  
 
 .card{
+  border: 4px var(--work-card-border-and-background-color) solid;
+  transition: border 0.25s ease-out;
+  position: relative;
+  padding: 5px;
   text-decoration: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-#card1{
-  grid-area: card1;
-  background-image: url(/images/work/study.jpg);
-}
-#card2{
-  grid-area: card2;
-  background-image: url(/images/work/marketing.jpg);
-}
-#card3{
-  grid-area: card3;
-  background-image: url(/images/work/calculator.jpg);
-}
-#card4{
-  grid-area: card4;
-  background-image: url(/images/work/e-comerce.jpg);
-}
-#card5{
-  grid-area: card5;
-  background-image: url(/images/work/login.jpg);
+.card .text{
+  position: absolute;
+  background-color: var(--work-card-border-and-background-color);
+  margin: auto;
+  bottom: 15px;
+  left: 0;
+ } 
+
+.card .text h3{
+  font-size: 20px;
+}  
+
+.card .text p{
+  font-size: 12px;
+}  
+
+.card:hover{
+  border: 8px var(--card-hover-color) solid;
+  transition: border 0.25s ease-in-out;
 }
 
-
+.card:hover .text{
+  background-color: var(--card-hover-color);
+}
+  
 /* Here starts the Contact section styling */
 .contact div, .contact div p a {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
