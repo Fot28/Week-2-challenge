@@ -11,10 +11,10 @@
 
 <body>
   <!-- main logo / nav -->
-  <header>
+  <header class="header-flex">
     <h1>Fotios</h1>
-    <nav>
-      <ul>
+    <nav class="nav-flex">
+      <ul class="menu">
         <li><a href="#about"><p>About me</p></a></li>
         <li><a href="#work"><p>Work</p></a></li>
         <li><a href="#contact"><p>Contact</p></a></li>
@@ -26,44 +26,50 @@
   <!-- hero banner -->
   <section class="hero-banner">
     <div>
-      <h2>The Feature of user interface!
+      <h2>Here is the Feature of User Interfaces!
       </h2>
     </div>
   </section>
 
   <main class="page-wrapper">
     <!-- about me -->
-    <section class="page-section" id="about">
-      <h2>About Me</h2>
-      <p>Hello, I'm Fotios Polymenakos, a student web developer currently learning and building my skills in HTML, CSS, JavaScript, and Git. I've completed a pre-work study project where I gained a solid foundation in web development basics. As a second project, I worked on rebuilding a customer website, applying best practices such as semantic HTML, logical structure, accessible alt attributes, sequential heading attributes, and a concise title element.
-
-        I'm eager to continue growing as a web developer and taking on new challenges. Collaboration and communication are key to creating successful websites, and I'm dedicated to working closely with clients to ensure their needs are met. Please feel free to reach out if you're interested in seeing my work or collaborating on a project. Thank you for considering my portfolio!</p>
+    <section class="about" id="about">
+      
+        <h2 id="h2-about">About Me</h2>
+        <p id="p-about">Hello, I'm Fotios Polymenakos, a student web developer currently learning and building my skills in HTML, CSS, JavaScript, and Git. I've completed a pre-work study project where I gained a solid foundation in web development basics. As a second project, I worked on rebuilding a customer website, applying best practices such as semantic HTML, logical structure, accessible alt attributes, sequential heading attributes, and a concise title element.
+  
+          I'm eager to continue growing as a web developer and taking on new challenges. Collaboration and communication are key to creating successful websites, and I'm dedicated to working closely with clients to ensure their needs are met. Please feel free to reach out if you're interested in seeing my work or collaborating on a project. Thank you for considering my portfolio!</p>
+      
     </section>
 
     <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2>Work</h2>
-      <a class="card" href="https://fot28.github.io/prework-study-guide/" target="_blank">
-        <div>
-          <h3>Pre Work Study</h3>
-          <p>HTML/CSS/Javascript</p>
-        </div>
-      </a>
-      <a class="card" href="https://fot28.github.io/challenge1/" target="_blank">
-        <div>
-          <h3>Challenge 1</h3>
-          <p>HTML/CSS</p>
-        </div>
-      </a>
+    <section class="work" id="work">
+      <h2 id="h2-work">Work</h2>
+      <div id="div-work">
+       <a class="card" href="https://fot28.github.io/prework-study-guide/" target="_blank">
+         <div>
+           <h3>Pre Work Study</h3>
+           <p>HTML/CSS/Javascript</p>
+         </div>
+       </a>
+       <a class="card" href="https://fot28.github.io/challenge1/" target="_blank">
+         <div>
+           <h3>Challenge 1</h3>
+           <p>HTML/CSS</p>
+         </div>
+        </a>
+      </div>
     </section>
 
     <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2>Contact Me</h2>
-      <p><a href="tel:123-456-7890"><img src="https://img.icons8.com/material-outlined/24/000000/phone--v1.png"/>123-456-7890</a></p>
-      <p><a href="mailto:fotios@gmail.com"><img src="https://img.icons8.com/material-outlined/24/000000/new-post.png"/>fotios@gmail.com</a></p>
-      <p><a href="https://github.com/Fot28" target="_blank"><img src="https://img.icons8.com/material-outlined/48/000000/github.png"/></a></p>
-      <p><a href="https://www.linkedin.com/in/your-username/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a></p>
+    <section class="contact" id="contact">
+      <h2 id="h2-contact">Contact Me</h2>
+      <div id="div-contact">
+        <p><a href="tel:123-456-7890"><img src="https://img.icons8.com/material-outlined/24/000000/phone--v1.png"/>123-456-7890</a></p>
+        <p><a href="mailto:fotios@gmail.com"><img src="https://img.icons8.com/material-outlined/24/000000/new-post.png"/>fotios@gmail.com</a></p>
+        <p><a href="https://github.com/Fot28" target="_blank"><img src="https://img.icons8.com/material-outlined/48/000000/github.png"/></a></p>
+        <p><a href="https://www.linkedin.com/in/your-username/" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a></p>
+      </div>
     </section>
   </main>
 </body>

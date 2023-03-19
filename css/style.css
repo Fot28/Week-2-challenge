@@ -1,12 +1,14 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  border: 1px red solid;
 }
 
 h1,
@@ -20,4 +22,103 @@ h6 {
 
 p {
   margin: 0;
+}
+/* Here starts the Header styling */
+header{
+  padding: 40px;
+}
+.header-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 2000;
+
+}
+
+.menu{
+  padding-right: 18px;
+  display: flex;
+  list-style: none;
+}
+
+ .menu li {
+  margin: 5px;
+}
+
+.menu li a{
+  color: black;
+  text-decoration: none;
+}
+
+.menu li a p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.hero-banner{
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  padding: 40px
+}
+
+.page-wrapper{
+  padding: 40px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "about"
+  "work"
+  "contact"
+}
+
+.about{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+  "h2-about" "p-about"
+  ;
+}
+
+.work{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+  "h2-work" "div-work"
+  ;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+  "h2-contact" "div-contact"
+  ;
+}
+
+.about, .work, .contact{
+  padding: 20px;
+
+}
+
+#h2-about, #h2-work, #h2-contact{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  border-right: 2px black solid;
+  text-align: right;
+}
+
+#p-about, #div-work, #div-contact{
+  padding-left: 30px;
+}
+
+#div-contact{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
 }
