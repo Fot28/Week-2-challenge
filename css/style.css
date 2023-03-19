@@ -1,36 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --header-text-glow-color-1: #fff;
+  --header-text-glow-color-2: rgb(255, 0, 119);
+  --hero-banner-text-glow-color-1: #fff;
+  --hero-banner-text-glow-color-2:  rgb(255, 0, 119);
+  --hero-banner-box-glow-color:  rgb(255, 0, 119);
+
 }
 
-body {
-  
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-  border: 1px red solid;
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+header h1, .menu li a p {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 5px var(--header-text-glow-color-1), 0 0 10px var(--header-text-glow-color-1), 0 0 15px var(--header-text-glow-color-1), 0 0 20px var(--header-text-glow-color-2), 0 0 35px var(--header-text-glow-color-2), 0 0 40px var(--header-text-glow-color-2), 0 0 50px var(--header-text-glow-color-2), 0 0 75px var(--header-text-glow-color-2);
 }
 
-p {
-  margin: 0;
-}
-/* Here starts the Header styling */
 header{
-  padding: 40px;
-}
-.header-flex{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px;
+  background-color: rgb(27, 40, 44);
 }
 
 h1 {
@@ -40,9 +33,9 @@ h1 {
 }
 
 .menu{
-  padding-right: 18px;
   display: flex;
   list-style: none;
+  padding-right: 18px;
 }
 
  .menu li {
@@ -50,75 +43,60 @@ h1 {
 }
 
 .menu li a{
-  color: black;
+  
   text-decoration: none;
-}
-
-.menu li a p {
-  text-align: center;
   font-size: 20px;
 }
 
+/* Here starts the hero banner styling */
 .hero-banner{
   display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
-  padding: 40px
+  justify-content: center;
+  align-content: center;
+  padding: 40px;
+  background-image: url(/images/img2/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration\ \(2\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.page-wrapper{
+.hero-banner h2{
+  background-color: rgb(27, 40, 44);
+  color:#ddac90;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff; /* set the text color */
+  text-shadow: 0 0 5px var(--hero-banner-text-glow-color-1), 0 0 10px var(--hero-banner-text-glow-color-1), 0 0 15px var(--hero-banner-text-glow-color-1), 0 0 20px var(--hero-banner-text-glow-color-2), 0 0 35px var(--hero-banner-text-glow-color-2), 0 0 40px var(--hero-banner-text-glow-color-2), 0 0 50px var(--hero-banner-text-glow-color-2), 0 0 75px var(--hero-banner-text-glow-color-2);
+  box-shadow: 0 0 10px var(--hero-banner-box-glow-color), 0 0 20px var(--hero-banner-box-glow-color), 0 0 30px var(--hero-banner-box-glow-color), 0 0 40px var(--hero-banner-box-glow-color);
+}
+
+/* Here starts the main styling */
+.page-wrapper {
   padding: 40px;
   display: grid;
   grid-template-rows: auto auto auto;
-  grid-template-areas:
-  "about"
-  "work"
-  "contact"
+  gap: 20px;
 }
 
-.about{
+/* Here starts the section styling */
+.about, .work, .contact {
   display: grid;
   grid-template-columns: 15% 85%;
-  grid-template-areas:
-  "h2-about" "p-about"
-  ;
 }
 
-.work{
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-template-areas:
-  "h2-work" "div-work"
-  ;
-}
-
-.contact{
-  display: grid;
-  grid-template-columns: 15% 85%;
-  grid-template-areas:
-  "h2-contact" "div-contact"
-  ;
-}
-
-.about, .work, .contact{
-  padding: 20px;
-
-}
-
-#h2-about, #h2-work, #h2-contact{
-  display: flex;
-  justify-content: flex-end;
+.about h2, .work h2, .contact h2 {
   padding-right: 10px;
   border-right: 2px black solid;
   text-align: right;
 }
 
-#p-about, #div-work, #div-contact{
+.contact div {
+  display: flex;
+  justify-content: space-between;
   padding-left: 30px;
 }
 
-#div-contact{
-  display: flex;
-  justify-content: space-between;
+.about p, .work div, .contact div {
   padding-left: 30px;
 }
