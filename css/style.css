@@ -1,22 +1,27 @@
 :root{
+  /* Here starts the Header color styling */
+  --header-color: rgb(27, 40, 44);
   --header-and-hero-banner-text-color: #fff;
   --header-text-glow-color-1: #fff;
   --header-text-glow-color-2: rgb(255, 0, 0);
+  /* Here starts the Hero banner styling */
+  --hero-banner-h2-background-color: rgba(27, 40, 44, 0.651);
   --hero-banner-text-glow-color-1: #fff;
   --hero-banner-text-glow-color-2:  rgb(255, 0, 0);
   --hero-banner-box-glow-color:  rgb(255, 0, 0);
+  /* Here starts the Main styling */
   --left-main-text-and-border-color: aliceblue;
-  --right-main-text-color: antiquewhite;
-
+  --right-main-background-color: rgba(59, 59, 59, 0.815);
+  --right-main-text-color: rgb(255, 223, 181);
+  --main-background-color: black;
 }
-
+/* Here starts the Body styling */
 *{
   margin: 0px;
   padding: 0px;
 }
-.links{
-  text-decoration: none;
-}
+
+
 /* Here starts the Header styling */
 header h1, .menu li a p {
   text-align: center;
@@ -29,13 +34,12 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 20px 60px;
-  background-color: rgb(27, 40, 44);
+  background-color: var(--header-color);
 }
 
 h1 {
   margin: 0;
   font-weight: 2000;
-
 }
 
 .menu{
@@ -52,19 +56,19 @@ h1 {
   font-size: 20px;
 }
 
-/* Here starts the hero banner styling */
+/* Here starts the Hero banner styling */
 .hero-banner{
   display: flex;
   justify-content: center;
   padding: 40px;
-  background-image: url(/images/img2/modern-futuristic-sci-fi-background-3d-illustration.jpg);
+  background-image: url(/images/Hero-banner/modern-futuristic-sci-fi-background-3d-illustration.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 .hero-banner h2{
-  background-color: rgb(27, 40, 44);
+  background-color: var(--hero-banner-h2-background-color);
   text-align: center;
   padding: 10px;
   border-radius: 20px;
@@ -75,24 +79,29 @@ h1 {
 
 /* Here starts the main styling */
 main{
-  background-image: url(/images/img1/stunning-view-colorful-patterned-neon-lights-darkness.jpg);
+  background-color: var(--main-background-color);
+  background-image: url(/images/Main/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center center;
   border: 5px black solid;
 }
 
-.page-wrapper {
+.page-wrapper-grid {
   padding: 40px;
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 20px;
 }
 
-/* Here starts the section styling */
+main section{
+  margin: 20px;
+}
+
+/* Here starts the sections styling */
 .about, .work, .contact {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 10% 90%;
 }
 
 .about h2, .work h2, .contact h2 {
@@ -100,21 +109,94 @@ main{
   padding-right: 10px;
   border-right: 2px var(--left-main-text-and-border-color) solid;
   text-align: right;
+  
 }
 
 main section h2, main section p, .card-h3, .card p, .contact div p a{
+  text-decoration: none;
   color: var(--right-main-text-color);
 }
 
+.about p, .contact div, .work div{
+margin-right: 35px;
+}
+
+.about p, .contact div{
+  margin-left: 18px;
+  padding: 12px;
+  border-radius: 20px;
+  background-color: var(--right-main-background-color);
+}
+
+.work div {
+  margin-left: 18px;
+  padding: 12px;
+}
+
+/* Here starts the work section grid styling */
+
+#work-grid a{
+  border: 2px black solid;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#work-grid{
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "card1 card1"
+  "card1 card1"
+  "card2 card3"
+  "card4 card5" 
+  ;
+}
+
+.card h3{
+  font-size: 20px;
+  
+}
+
+.card p{
+  font-size: 12px;
+}
+
+.card{
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#card1{
+  grid-area: card1;
+  background-image: url(/images/work/study.jpg);
+}
+#card2{
+  grid-area: card2;
+  background-image: url(/images/work/marketing.jpg);
+}
+#card3{
+  grid-area: card3;
+  background-image: url(/images/work/calculator.jpg);
+}
+#card4{
+  grid-area: card4;
+  background-image: url(/images/work/e-comerce.jpg);
+}
+#card5{
+  grid-area: card5;
+  background-image: url(/images/work/login.jpg);
+}
+
+
+/* Here starts the Contact section styling */
 .contact div, .contact div p a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.about p, .work div, .contact div{
-  margin-left: 18px;
-  padding: 12px;
-  border-radius: 20px;
-  background-color: rgba(80, 80, 80, 0.699);
 }
