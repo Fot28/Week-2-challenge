@@ -1,14 +1,14 @@
 :root{
+  --header-and-hero-banner-text-color: #ffffffcc;
   /* Here starts the Header color styling */
   --header-color: rgb(27, 40, 44);
-  --header-and-hero-banner-text-color: #fff;
-  --header-text-glow-color-1: #fff;
-  --header-text-glow-color-2: rgb(255, 0, 0);
+  --header-text-glow-color-1: #ffffff8e;
+  --header-text-glow-color-2: rgba(255, 0, 0, 0.603);
   /* Here starts the Hero banner styling */
-  --hero-banner-h2-background-color: rgb(0, 0, 0);
-  --hero-banner-text-glow-color-1: #fff;
-  --hero-banner-text-glow-color-2:  rgb(255, 0, 0);
-  --hero-banner-box-glow-color:  rgb(255, 0, 0);
+  --hero-banner-h2-background-color: rgba(0, 0, 0, 0.507);
+  --hero-banner-text-glow-color-1: #ffffff8e;
+  --hero-banner-text-glow-color-2:  rgba(255, 0, 0, 0.603);
+  --hero-banner-box-glow-color:  rgba(255, 0, 0, 0.603);
   /* Here starts the Main styling */
   --left-main-text-and-border-color: aliceblue;
   --right-main-background-color: rgba(90, 90, 90, 0.815);
@@ -62,36 +62,38 @@ h1 {
 /* Here starts the Hero banner styling */
 .hero-banner{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content:space-around;
   padding: 10px;
-  background-image: url(/images/Hero-banner/modern-futuristic-sci-fi-background-3d-illustration.jpg);
+  background-image: url(/images/Hero-banner/tree-silhouetted-against-starry-night-sky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center ;
 }
 
-.hero-banner img{
+.prof-pic,.hero-banner p{
   width: 150px;
+  margin: 0 30px;
 }
 
 .hero-banner h2{
+  margin-bottom: 100px;
+  font-size: 24px;
   text-align: center;
-  background-color: var(--hero-banner-h2-background-color);
   padding: 15px;
   border-radius: 20px;
+  background-color: var(--hero-banner-h2-background-color);
   color: var(--header-and-hero-banner-text-color);
   text-shadow: 0 0 5px var(--hero-banner-text-glow-color-1), 0 0 10px var(--hero-banner-text-glow-color-1), 0 0 15px var(--hero-banner-text-glow-color-1), 0 0 20px var(--hero-banner-text-glow-color-2), 0 0 35px var(--hero-banner-text-glow-color-2), 0 0 40px var(--hero-banner-text-glow-color-2), 0 0 50px var(--hero-banner-text-glow-color-2), 0 0 75px var(--hero-banner-text-glow-color-2);
-  box-shadow: 0 0 10px var(--hero-banner-box-glow-color), 0 0 20px var(--hero-banner-box-glow-color), 0 0 30px var(--hero-banner-box-glow-color), 0 0 40px var(--hero-banner-box-glow-color);
 }
 
 /* Here starts the main styling */
 main{
   background-color: var(--main-background-color);
-  background-image: url(/images/Main/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg);
+  background-image: url(/images/Main/abstract-uv-ultraviolet-light-composition1.jpg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   border: 5px black solid;
 }
@@ -121,44 +123,34 @@ main section{
   
 }
 
-main section h2, main section p, .card-h3, .card p, .contact div p a{
+main section h2, main section p, .text h3, .card p, .contact div p a{
   text-decoration: none;
   color: var(--right-main-text-color);
 }
-
 .about p{
   font-size: 18px;
 }
 
-.about p, .contact div, .work div{
-margin-right: 35px;
+.about p, .contact div, #work-grid{
+margin-right: 50px;
 }
 
 .about p, .contact div{
   margin-left: 18px;
   padding: 12px;
   border-radius: 20px;
-  background-color: var(--right-main-background-color);
+ 
 }
 
-.work div {
+#work-grid {
   margin-left: 18px;
   padding: 12px;
 }  
 
 /* Here starts the work section grid styling */
-
-#work-grid a{
-  
-  margin: 5px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}  
-
 #work-grid{
   display: grid;
+  justify-items: stretch;
   grid-template-rows:150px 150px 150px 150px 150px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
@@ -192,35 +184,38 @@ background-image: url(/images/work/marketing.jpg);
 }  
 
 .card{
+  margin: 5px;
+  padding: 5px;
   border: 4px var(--work-card-border-and-background-color) solid;
-  transition: border 0.25s ease-out;
+  transition: all 100ms ease-out;
   position: relative;
   padding: 5px;
   text-decoration: none;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 
-.card .text{
+.text{
+  padding: 10px;
   position: absolute;
   background-color: var(--work-card-border-and-background-color);
-  margin: auto;
   bottom: 15px;
   left: 0;
  } 
 
-.card .text h3{
+.text h3{
   font-size: 20px;
 }  
 
-.card .text p{
+.text p{
   font-size: 12px;
 }  
 
 .card:hover{
-  border: 8px var(--card-hover-color) solid;
-  transition: border 0.25s ease-in-out;
+  transform: scale(1.03); 
+  border: 6px var(--card-hover-color) solid;
+  transition: all 100ms ease-in-out;
 }
 
 .card:hover .text{
@@ -232,4 +227,8 @@ background-image: url(/images/work/marketing.jpg);
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.contact div{
+  background-color: var(--right-main-background-color);
 }
