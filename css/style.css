@@ -76,7 +76,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-image: url(../images/Hero-banner/tree-silhouetted-against-starry-night-sky.jpg);
+  background-image: url(../images/Hero-banner/Banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center ;
@@ -102,7 +102,7 @@ h1 {
 /* Here starts the main styling */
 main{
   background-color: var(--main-background-color);
-  background-image: url(../images/Main/abstract-uv-ultraviolet-light-composition1.jpg);
+  background-image: url(../images/Main/main.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

@@ -20,7 +20,7 @@ also you can use the links at contact section to contact me by any way you want.
 
 ![Mobile screenshot](/images/screenshots/mobile.png)
     
-For more information, please visit [https://fot28.github.io/Week-2-challenge/](https://fot28.github.io/Week-2-challenge/).
+For more information, please visit [https://fot28.github.io/Week-2-challenge/](https://github.com/Fot28/Week-2-challenge.git).
 
 ## Credits
 
