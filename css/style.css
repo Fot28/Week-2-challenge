@@ -238,6 +238,18 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
   background-color: var(--right-main-background-color);
 }
 
+/* Here starts the footer styling */
+
+footer{
+  display: flex;
+  background-color: var(--header-color);
+  padding: 10px;
+  justify-content: center;
+}
+footer p{
+  color: var(--header-text-glow-color-1);
+}
+
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
     /* Here starts the Header styling */
