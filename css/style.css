@@ -246,7 +246,7 @@ footer{
   padding: 10px;
   justify-content: center;
 }
-footer p{
+footer h4{
   color: var(--header-text-glow-color-1);
 }
 
