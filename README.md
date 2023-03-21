@@ -14,23 +14,23 @@ Open the website you can use the links on menu to go on each section and also my
 also you can use the links at contact section to contact me by any way you want.
 
 
-![Laptop screenshot](/images/screenshot/laptop.png)
+![Laptop screenshot](/images/screenshots/laptop.png)
 
-![Tablet screenshot](/images/screenshot/tablet.png)
+![Tablet screenshot](/images/screenshots/tablet.png)
 
-![Mobile screenshot](/images/screenshot/mobile.png)
+![Mobile screenshot](/images/screenshots/mobile.png)
     
 For more information, please visit [https://fot28.github.io/Week-2-challenge/](https://fot28.github.io/Week-2-challenge/).
 
 ## Credits
 
-[Starter code files](https://static.fullstack-bootcamp.com/uk-16/activities/01-html-git-github-module/04-code-refactor-lesson/challenge.zip)
+[Icons](https://icons8.com/icons)
 
-[HTML Semantic Elements](https://static.fullstack-bootcamp.com/uk-16/activities/01-html-git-github-module/04-code-refactor-lesson/challenge.zip)
+[Images](https://www.freepik.com/)
 
-[HTML img alt Attribute](https://www.w3schools.com/tags/att_img_alt.asp)
+[When I stuck](https://stackoverflow.com/)
 
-[Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+[Resume template](https://sampleresumetemplate.net/)
 
 ## License
 
