@@ -16,7 +16,14 @@
   --main-background-color: black;
   --work-card-border-and-background-color:rgb(0, 140, 255);
   --card-hover-color: rgb(241, 93, 93);
+
+  /* Fonts */
+  --font-h3-p: 'Quicksand', sans-serif;
+  --font-h1-h2: 'Source Serif Pro', serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
 /* Here starts the Body styling */
 *{
@@ -25,13 +32,13 @@
 }
 
 /* Here starts the Header styling */
-header h1, .menu li a p {
+.header-flex h1, .menu li a p {
   text-align: center;
   color: var(--header-and-hero-banner-text-color);
   text-shadow: 0 0 5px var(--header-text-glow-color-1), 0 0 10px var(--header-text-glow-color-1), 0 0 15px var(--header-text-glow-color-1), 0 0 20px var(--header-text-glow-color-2), 0 0 35px var(--header-text-glow-color-2), 0 0 40px var(--header-text-glow-color-2), 0 0 50px var(--header-text-glow-color-2), 0 0 75px var(--header-text-glow-color-2);
 }
 
-header{
+.header-flex{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +47,7 @@ header{
 }
 
 h1 {
+  font-family: 'Source Serif Pro', serif;
   margin: 0;
   font-weight: 2000;
 }
@@ -55,6 +63,7 @@ h1 {
 }
 
 .menu li a{
+  font-family: var(--font-h1-h2);
   font-size: 20px;
   text-decoration: none;
 }
@@ -77,6 +86,7 @@ h1 {
 }
 
 .hero-banner h2{
+  font-family: var(--font-h1-h2);
   margin-bottom: 100px;
   font-size: 24px;
   text-align: center;
@@ -109,6 +119,7 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
 }
 
 .about h2, .work h2, .contact h2 {
+  font-family: var(--font-h1-h2);
   display: flex;
   flex-direction: column;
   color: var(--left-main-text-and-border-color);
@@ -120,6 +131,7 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
 
 
 .about p, .contact div{
+  font-family: var(--font-h3-p);
   margin-left: 18px;
   padding: 12px;
   border-radius: 20px;
@@ -156,8 +168,8 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
   background-image: url(/images/work/study.jpg);
 }  
 #card2{
-grid-area: card2;
-background-image: url(/images/work/marketing.jpg);
+  grid-area: card2;
+  background-image: url(/images/work/marketing.jpg);
 }  
 #card3{
   grid-area: card3;
@@ -194,10 +206,12 @@ background-image: url(/images/work/marketing.jpg);
  } 
 
 .text h3{
+  font-family: var(--font-h3-p);
   font-size: 20px;
 }  
 
 .text p{
+  font-family: var(--font-h3-p);
   font-size: 12px;
 }  
 
@@ -224,8 +238,8 @@ background-image: url(/images/work/marketing.jpg);
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  /* Here starts the Header styling */
-  header{
+    /* Here starts the Header styling */
+  .header-flex{
     padding: 20px 20px;
   }
   
@@ -248,42 +262,111 @@ background-image: url(/images/work/marketing.jpg);
   }
   
 
- /* Here starts the main styling */
-.about, .work, .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  /* Here starts the main styling */
+  .about, .work, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* Here starts the about section styling */
-.about h2, .work h2, .contact h2 {
-  display: block;
-  text-align: center;
-  width: 90%;
-  padding-right: 0;
-  padding-bottom: 10px;
-  border-right: 0;
-  border-bottom: 2px var(--left-main-text-and-border-color) solid;
-}
- .about p{
-  text-align: center;
- }
+  /*   Here starts the about section styling */
+  .about h2, .work h2, .contact h2 {
+    display: block;
+    text-align: center;
+    width: 90%;
+    padding-right: 0;
+    padding-bottom: 10px;
+    border-right: 0;
+    border-bottom: 2px var(--left-main-text-and-border-color) solid;
+  }  
 
- /* Here starts the work section grid styling */
+  /* Here starts the work section grid styling */
   #work-grid{
     margin: 10px;
     grid-template-rows: 40vh 30vh 30vh;
   }
- /* Here starts the contact section styling */
- .contact div{
-  margin: 20px;
-  padding: 0;
-  width: 90%;
- }
+
+  /* Here starts the contact section styling */
+  .contact div{
+    margin: 20px;
+    padding: 0;
+    width: 90%;
+  }
 
 }
 
 @media only screen and (max-width: 425px) {
+  h2{
+    font-size: 22px;
+  }
+  /* Here starts the Header styling */
+  .header-flex{
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+  
+  .menu{
+    margin-top: 5px;
+  }
+  
+  /* Here starts the Hero banner styling */
+  .hero-banner{
+    flex-direction: column;
+  }
 
+  .prof-pic{
+    width: 120px;
+  }
+
+  .hero-banner h2{
+    margin: 10px auto;
+    font-size: 20px;
+  }
+  
+
+  /* Here starts the main styling */
+  .about, .work, .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Here starts the about section styling */
+  .about h2, .work h2, .contact h2 {
+    display: block;
+    text-align: center;
+    width: 90%;
+    padding-right: 0;
+    padding-bottom: 10px;
+    border-right: 0;
+    border-bottom: 2px var(--left-main-text-and-border-color) solid;
+  }
+ 
+  /* Here starts the work section grid styling */
+  #work-grid{
+    margin: 10px;
+    grid-template-columns: 80vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh 25vh;
+    grid-template-areas: 
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    ;
+  }
+  /* Here starts the contact section styling */
+  .contact div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 0;
+    width: 90%;
+  }
+
+  .contact div p{
+    margin: 3px;
+  }
 
 }
+
