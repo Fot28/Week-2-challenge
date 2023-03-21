@@ -4,11 +4,13 @@
   --header-color: rgb(27, 40, 44);
   --header-text-glow-color-1: #ffffff8e;
   --header-text-glow-color-2: rgba(255, 0, 0, 0.603);
+
   /* Here starts the Hero banner styling */
   --hero-banner-h2-background-color: rgba(0, 0, 0, 0.507);
   --hero-banner-text-glow-color-1: #ffffff8e;
   --hero-banner-text-glow-color-2:  rgba(255, 0, 0, 0.603);
   --hero-banner-box-glow-color:  rgba(255, 0, 0, 0.603);
+  
   /* Here starts the Main styling */
   --left-main-text-and-border-color: aliceblue;
   --right-main-background-color: rgba(90, 90, 90, 0.815);
@@ -341,12 +343,17 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
     border-right: 0;
     border-bottom: 2px var(--left-main-text-and-border-color) solid;
   }
+
+  .about p{
+    font-size: 16px;
+  }
+
  
   /* Here starts the work section grid styling */
   #work-grid{
     margin: 10px;
     grid-template-columns: 80vw;
-    grid-template-rows: 25vh 25vh 25vh 25vh 25vh;
+    grid-template-rows: 35vh 35vh 35vh 35vh 35vh;
     grid-template-areas: 
     "card1"
     "card2"
@@ -355,6 +362,14 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
     "card5"
     ;
   }
+
+  .text h3{
+    font-size: 15px;
+  }
+  .text p{
+    font-size: 10px;
+  }
+
   /* Here starts the contact section styling */
   .contact div{
     display: flex;
