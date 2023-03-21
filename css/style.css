@@ -76,7 +76,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-image: url(../images/Hero-banner/Banner.jpg);
+  background-image: url("../images/Hero-banner/Banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center ;
@@ -102,7 +102,7 @@ h1 {
 /* Here starts the main styling */
 main{
   background-color: var(--main-background-color);
-  background-image: url(../images/Main/main.jpg);
+  background-image: url("../images/Main/main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -167,23 +167,23 @@ main section h2, main section p, .text h3, .card p, .contact div p a{
 
 #card1{
   grid-area: card1;
-  background-image: url(../images/work/study.jpg);
+  background-image: url("../images/work/study.jpg");
 }  
 #card2{
   grid-area: card2;
-  background-image: url(../images/work/marketing.jpg);
+  background-image: url("../images/work/marketing.jpg");
 }  
 #card3{
   grid-area: card3;
-  background-image: url(../images/work/calculator.jpg);
+  background-image: url("../images/work/calculator.jpg");
 }  
 #card4{
   grid-area: card4;
-  background-image: url(../images/work/e-comerce.jpg);
+  background-image: url("../images/work/e-comerce.jpg");
 }  
 #card5{
   grid-area: card5;
-  background-image: url(../images/work/login.jpg);
+  background-image: url("../images/work/login.jpg");
 }  
 
 .card{
