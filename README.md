@@ -11,7 +11,7 @@ N/A
 ## Usage
 
 Open the website you can use the links on menu to go on each section and also my resume. If you click at each card on work section you can see each of my projects.
-also you can use the links at contact section to contact me by any way you want.
+Also you can use the links at contact section to contact me by any way you want.
 
 
 ![Laptop screenshot](/images/screenshots/laptop.png)
